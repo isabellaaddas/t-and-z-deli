@@ -9,3 +9,9 @@
     background-color:#E9B44C;
     margin:1% 0;
 }
+
+@media only screen and (orientation:landscape) {
+    #small-toggle-nav {
+        display:none;
+    }
+}
