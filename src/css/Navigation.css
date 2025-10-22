@@ -1,0 +1,22 @@
+#nav-items {
+    background:#A72608;
+    color:#fff;
+    text-align:center;
+}
+
+#main-nav li {
+    padding:25px;
+    border-top:solid 1px #fff;
+}
+
+.links {
+    padding:15px;
+    font-weight:bold;
+    font-size:1.5em;
+}
+
+@media only screen and (orientation:landscape) {
+    .links {
+        font-size:initial;
+    }
+}
