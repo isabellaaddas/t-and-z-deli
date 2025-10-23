@@ -1,4 +1,12 @@
 /* Universal structure */
+:root {
+    --primary-color:#A72608;
+    --secondary-color:#FFF1D6;
+    --tertiary-color:#E9B44C;
+    --quaternary-color:#14453D;
+    --quinary-color:#50A2A7;
+}
+
 body {
   font-family:Arial, Helvetica, sans-serif;
   margin:0;
@@ -51,12 +59,24 @@ img {
 /* Classes */
 .link {
   text-decoration:none;
-  color:#fff; 
+  color:inherit;
+}
+
+.hide-small {
+  display:none;
+}
+
+.hidden {
+  display:none;
 }
 
 /* Resolution */
 @media only screen and (orientation:landscape) {
   .columns {
+    display:flex;
+  }
+
+  .hide-small {
     display:flex;
   }
 }

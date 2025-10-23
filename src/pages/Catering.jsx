@@ -2,7 +2,7 @@ import "./../css/Catering.css";
 
 const Catering = () => {
     return (
-        <main>
+        <main id="catering">
             <h1>I'm Catering</h1>
         </main>
     );

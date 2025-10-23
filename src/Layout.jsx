@@ -9,7 +9,7 @@ const Layout = () => {
 
             <Outlet />
 
-            <Footer />
+            <Footer phone="(973) 207-3474" email="teezeedeli@company.com"/>
         </>
     )
 };

@@ -1,5 +1,5 @@
 #nav-items {
-    background:#A72608;
+    background:var(--primary-color);
     color:#fff;
     text-align:center;
 }
@@ -10,7 +10,7 @@
 }
 
 /* Classes */
-.links {
+.nav-links {
     padding:15px;
     font-weight:bold;
     font-size:1.5em;
@@ -18,8 +18,8 @@
     color:#fff;
 }
 
-.links:hover {
-    background-color:#50A2A7;
+.nav-links:hover {
+    background-color:var(--quinary-color);
     border-radius:10px;
     transition:0.2s;
 }

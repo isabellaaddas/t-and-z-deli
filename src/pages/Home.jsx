@@ -2,7 +2,7 @@ import "./../css/Home.css";
 
 const Home = () => {
     return (
-        <main>
+        <main id="home">
             <h1>I'm Home</h1>
         </main>
     );
