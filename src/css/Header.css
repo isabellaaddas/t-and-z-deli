@@ -10,6 +10,7 @@
     border:none;
 }
 
+/* Resolution */
 @media only screen and (orientation:landscape) {
     #logo-bg img {
         width:20%;

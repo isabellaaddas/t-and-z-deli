@@ -9,6 +9,7 @@ import Careers from "./pages/Careers";
 import Catering from "./pages/Catering";
 import Order from "./pages/Order";
 import Vendors from "./pages/Vendors";
+import Contact from "./pages/Contact";
 
 export default function App() {
   return (
@@ -20,6 +21,16 @@ export default function App() {
         <Route index element={<Home />}/>
 
         <Route path="about" element={<About />}/>
+
+        <Route path="order" element={<Order />}/>
+
+        <Route path="catering" element={<Catering />}/>
+
+        <Route path="careers" element={<Careers />}/>
+
+        <Route path="vendors" element={<Vendors />}/>
+
+        <Route path="contact" element={<Contact />}/>
 
         </Route>
 

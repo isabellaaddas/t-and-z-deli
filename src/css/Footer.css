@@ -1,0 +1,10 @@
+footer {
+    background:#A72608;
+    color:#fff;
+    padding:20px;
+    text-align:center;
+}
+
+footer div:not(:last-child) {
+    border-right:solid 3px #fff;
+}

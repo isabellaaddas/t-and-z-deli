@@ -9,6 +9,7 @@
     border-top:solid 1px #fff;
 }
 
+/* Classes */
 .links {
     padding:15px;
     font-weight:bold;
@@ -23,6 +24,7 @@
     transition:0.2s;
 }
 
+/* Resolution */
 @media only screen and (orientation:landscape) {
     #main-nav li {
         border-top:none;

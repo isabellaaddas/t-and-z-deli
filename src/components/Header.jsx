@@ -5,22 +5,19 @@ import {Link} from "react-router-dom";
 
 const Header = () => {
     return (
-        <>
-            <header>
-                <div id="logo-bg">
-                    <div id="logo">
-                        <Link to="/">
-                            <img src="./../images/deli-logo.png"/>
-                        </Link>
-                    </div>
+        <header>
+            <div id="logo-bg">
+                <div id="logo">
+                    <Link to="/">
+                        <img src="./../images/deli-logo.png"/>
+                    </Link>
                 </div>
+            </div>
 
-                <SmallNavigation />
+            <SmallNavigation />
 
-                <Navigation />
-            </header>
-        </>
-        
+            <Navigation />
+        </header>
     );
 };
 
