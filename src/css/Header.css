@@ -1,6 +1,7 @@
 #logo-bg {
     background:url("./../images/deli-logo-bg.jpg");
     background-position:center;
+    background-size:150%;
     text-align:center;
 }
 

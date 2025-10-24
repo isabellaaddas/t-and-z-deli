@@ -1,10 +1,26 @@
 footer {
     background:#A72608;
     color:#fff;
-    padding:20px;
+    padding:8px;
     text-align:center;
+    font-size:0.5em;
 }
 
 footer div:not(:last-child) {
-    border-right:solid 3px #fff;
+    border-right:solid 1.5px #fff;
+}
+
+footer .link:hover {
+    text-decoration:underline;
+}
+
+@media only screen and (orientation:landscape) {
+    footer {
+        padding:20px;
+        font-size:100%;
+    }
+
+    footer div:not(:last-child) {
+        border-right:solid 3px #fff;
+    }
 }
