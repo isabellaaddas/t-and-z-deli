@@ -1,0 +1,10 @@
+#careers {
+    margin:5%;
+    align-items:center;
+}
+
+@media only screen and (orientation:landscape) {
+    #careers {
+        margin:3%;
+    }
+}

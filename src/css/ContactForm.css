@@ -1,0 +1,26 @@
+#contact-form {
+    margin:5% auto;
+    width:fit-content;
+    font-size:87%;
+}
+
+#contact-form input, #contact-form button, #contact-form textarea {
+    font-size:0.85em;
+    margin-top:7px;
+}
+
+@media only screen and (orientation:landscape) {
+    #contact-form {
+        margin-top:5%;
+        margin-left:5%;
+        font-size:initial;
+    }
+
+    #contact-form input, #contact-form button {
+        font-size:initial;
+    }
+
+    #contact-form input, #contact-form button, #contact-form textarea {
+        margin-top:15px;
+    }
+}

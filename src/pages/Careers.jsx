@@ -1,9 +1,13 @@
 import "./../css/Careers.css";
+import JobForm from "./../components/JobForm";
+import JobDescription from "./../components/JobDescription";
 
 const Careers = () => {
     return (
-        <main id="careers">
-            <h1>I'm Careers</h1>
+        <main id="careers" className="columns">
+            <JobForm />
+
+            <JobDescription />
         </main>
     );
 };

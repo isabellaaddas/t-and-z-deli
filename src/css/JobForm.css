@@ -1,0 +1,30 @@
+#job-app-form {
+    padding:3% 0 5% 25%;
+    border-bottom:solid 1px var(--quaternary-color);
+    font-size:87.5%;
+}
+
+#job-app-form input {
+    font-size:0.75em;
+}
+
+#job-app-form input:not(:last-child) {
+    width:55%;
+}
+
+@media only screen and (orientation:landscape) {
+    #job-app-form {
+        padding:3%;
+        border-bottom:none;
+        border-right:solid 1px var(--quaternary-color);
+        font-size:revert;
+    }
+
+    #job-app-form input {
+        font-size:initial;
+    }
+
+    #job-app-form input:not(:last-child, #resume) {
+        width:95%;
+    }
+}

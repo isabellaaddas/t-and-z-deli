@@ -1,0 +1,20 @@
+#vendors {
+    margin:5%;
+    align-items:center;
+}
+
+#vendors h2 {
+    text-align:center;
+    margin-bottom:7%;
+    font-size:1.15em;
+}
+
+#vendors p {
+    font-size:105%;
+}
+
+@media only screen and (orientation:landscape) {
+    #vendors h2, #vendors p {
+        font-size:revert;
+    }
+}

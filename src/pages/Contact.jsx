@@ -1,9 +1,13 @@
 import "./../css/Contact.css";
+import ContactForm from "./../components/ContactForm";
+import contactPic from "./../images/contact-us.jpg";
 
 const Contact = () => {
     return (
-        <main id="contact">
-            <h1>I'm Contact</h1>
+        <main id="contact" className="columns">
+            <ContactForm />
+
+            <div id="contact-img" className="one"><img src={contactPic}/></div>
         </main>
     );
 };

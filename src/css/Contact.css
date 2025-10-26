@@ -1,0 +1,23 @@
+#contact {
+    margin:auto;
+}
+
+#contact-img {
+    width:75%;
+    margin:auto;
+    margin-bottom:5px;
+    margin-top:10%;
+}
+
+@media only screen and (orientation:landscape) {
+    #contact-img {
+        margin:auto;
+        margin-top:3px;
+        padding:10px;
+        text-align:center;
+    }
+
+    #contact-img img {
+        width:80%;
+    }
+}

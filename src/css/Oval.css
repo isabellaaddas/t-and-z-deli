@@ -1,0 +1,20 @@
+.oval {
+    background:var(--quaternary-color);
+    border:solid 1px var(--quaternary-color);
+    border-radius:50%;
+    color:#fff;
+    text-align:center;
+    width:45%;
+    padding:10px;
+    margin:10px auto;
+    font-size:65%;
+}
+
+@media only screen and (orientation:landscape) {
+    .oval {
+        width:75%;
+        padding:20px;
+        margin:20px auto;
+        font-size:100%;
+    }
+}

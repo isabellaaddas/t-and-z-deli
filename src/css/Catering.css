@@ -1,0 +1,35 @@
+#catering {
+    background:var(--secondary-color);
+}
+
+#find-location {
+    text-align:center;
+    padding:3% 0;
+}
+
+#find-location input {
+    width:60%;
+}
+
+#find-location h1 {
+    font-size:150%;
+}
+
+#submit-catering {
+    text-align:center;
+    padding-bottom:2%;
+}
+
+@media only screen and (orientation:landscape) {
+    #find-location h1 {
+        font-size:revert;
+    }
+    
+    #find-location input {
+        font-size:initial;
+    }
+
+    #submit-catering input {
+        font-size:1em;
+    }
+}

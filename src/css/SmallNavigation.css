@@ -1,13 +1,13 @@
 #small-toggle-nav {
     background:var(--quaternary-color);
-    padding:7px 5px;
+    padding:5px;
 }
 
 #small-toggle-nav div {
     width:5%;
     height:2px;
     background-color:var(--tertiary-color);
-    margin:5px 0;
+    margin:4px 0;
 }
 
 /* Resolution */

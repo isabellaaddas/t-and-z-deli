@@ -1,0 +1,26 @@
+#farm-text, #supplier-text {
+    padding:2% 3%;
+}
+
+#farm-map, #delivery-truck {
+    text-align:center;
+}
+
+#farm-map img {
+    width:50%;
+}
+
+#delivery-truck img {
+    margin-top:5px;
+    width:85%;
+}
+
+@media only screen and (orientation:landscape) {
+    #farm-text, #supplier-text {
+        padding:3%;
+    }
+    
+    #delivery-truck img {
+        margin-top:10px;
+    }
+}

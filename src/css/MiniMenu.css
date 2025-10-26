@@ -1,0 +1,45 @@
+.mini-menu {
+    color:#000;
+    margin:5% auto;
+    background:var(--tertiary-color);
+    padding:1% 3.5%;
+    width:40%;
+    border-radius:15px;
+    font-size:85%;
+}
+
+.mini-menu select {
+    font-size:0.7em;
+    margin-bottom:5%;
+}
+
+.mini-menu p:first-child {
+    margin-bottom:5px;
+}
+
+.mini-menu h6 {
+    margin:0;
+    text-indent:15px;
+}
+
+@media only screen and (orientation:landscape) {
+    .mini-menu {
+        padding:1.5% 5%;
+        width:75%;
+        border-radius:25px;
+        font-size:130%;
+    }
+
+    .mini-menu select {
+        font-size:initial;
+        width:100%;
+    }
+
+    .mini-menu h6 {
+        text-indent:30px;
+    }
+
+    .mini-menu p:first-child {
+        margin-bottom:10px;
+    }
+}

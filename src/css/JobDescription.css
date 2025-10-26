@@ -1,0 +1,40 @@
+#job-desc {
+    padding:3% 5%;
+    margin:5%;
+    border:solid 1px var(--quaternary-color);
+}
+
+#job-img {
+    padding:0 2%;
+}
+
+#job-desc h2 {
+    text-align:center;
+    font-size:120%;
+}
+
+#job-desc p {
+    font-size:110%;
+    margin:10px 0;
+    line-height:1.1em;
+}
+
+@media only screen and (orientation:landscape) {
+    #job-desc {
+        padding:3%;
+        margin:0;
+        margin-left:5%;
+    }
+
+    #job-desc h2, #job-desc p {
+        font-size:revert;
+    }
+
+    #job-img {
+        padding:2.5%;
+    }
+
+    #job-desc p {
+        line-height:normal;
+    }
+}
