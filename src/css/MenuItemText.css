@@ -1,0 +1,42 @@
+.menu-item-text {
+    align-items:center;
+}
+
+.top-text {
+    margin:-5px 0;
+}
+
+.top-text, .bottom-text {
+    font-size:90%;
+}
+
+.top-text h4:first-child {
+    margin-right:12.5px;
+}
+
+.top-text h4:last-child {
+    text-align:right;
+}
+
+.bottom-text p {
+    margin:0;
+    margin-bottom:5px;
+}
+
+@media only screen and (orientation:landscape) {
+    .top-text {
+        margin:0;
+    }
+
+    .top-text, .bottom-text {
+        font-size:100%;
+    }
+
+    .top-text h4:first-child {
+        margin-right:0;
+    }
+
+    .bottom-text p {
+        margin-bottom:10px;
+    }
+}
