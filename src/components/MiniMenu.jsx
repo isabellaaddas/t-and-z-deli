@@ -21,7 +21,7 @@ const MiniMenu = (props) => {
         );
     } else if (props.category == "soups") {
         return (
-            <div class="mini-menu">
+            <div className="mini-menu">
                 <p>1 POT ...... $69.99</p>
                 <h6>*Feeds 10</h6>
                 <p>3 POTS ...... $189.99</p>
@@ -39,7 +39,7 @@ const MiniMenu = (props) => {
         );
     } else if (props.category == "salads") {
         return (
-            <div class="mini-menu">
+            <div className="mini-menu">
                 <p>1 TIN ...... $79.99</p>
                 <h6>*Feeds 10</h6>
                 <p>3 TINS ...... $209.99</p>
@@ -55,7 +55,7 @@ const MiniMenu = (props) => {
         );
     } else if (props.category == "desserts") {
         return (
-            <div class="mini-menu">
+            <div className="mini-menu">
                 <p>CAKE OF CHOICE ...... $89.99</p>
                 <p>TIRAMISU ...... $69.99</p>
                 <p>GELATO ...... $99.99</p>
