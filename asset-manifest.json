@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/t-and-z-deli/static/css/main.4886c1f9.css",
-    "main.js": "/t-and-z-deli/static/js/main.abffc5c4.js",
+    "main.css": "/t-and-z-deli/static/css/main.58a5003b.css",
+    "main.js": "/t-and-z-deli/static/js/main.8cd4c031.js",
     "static/media/job-example.jpg": "/t-and-z-deli/static/media/job-example.5a04a6a769fca9f9597e.jpg",
     "static/media/deli-logo.png": "/t-and-z-deli/static/media/deli-logo.1e253bc6ae527c1fa76e.png",
     "static/media/delivery-supplier.jpg": "/t-and-z-deli/static/media/delivery-supplier.8d24db01491adfaa30cc.jpg",
@@ -13,11 +13,11 @@
     "static/media/farm-map.png": "/t-and-z-deli/static/media/farm-map.6f85e3d9c5a929af5381.png",
     "static/media/compass-icon.png": "/t-and-z-deli/static/media/compass-icon.348bdd995e414e231711.png",
     "index.html": "/t-and-z-deli/index.html",
-    "main.4886c1f9.css.map": "/t-and-z-deli/static/css/main.4886c1f9.css.map",
-    "main.abffc5c4.js.map": "/t-and-z-deli/static/js/main.abffc5c4.js.map"
+    "main.58a5003b.css.map": "/t-and-z-deli/static/css/main.58a5003b.css.map",
+    "main.8cd4c031.js.map": "/t-and-z-deli/static/js/main.8cd4c031.js.map"
   },
   "entrypoints": [
-    "static/css/main.4886c1f9.css",
-    "static/js/main.abffc5c4.js"
+    "static/css/main.58a5003b.css",
+    "static/js/main.8cd4c031.js"
   ]
 }
