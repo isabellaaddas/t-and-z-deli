@@ -29,8 +29,22 @@
 }
 
 @media only screen and (orientation:landscape) {
+    #store-hours h2 {
+        padding:25px;
+        border-radius:20px;
+        font-size:revert;
+    }
+
+    #hours-table {
+        border-radius:20px;
+        font-size:revert;
+    }
+
+    #hours-table tr:not(:last-child) {
+        border-bottom:solid 1.5px #000;
+    }
+
     #hours-table td {
-        font-size:100%;
         padding:5%;
     }
 }

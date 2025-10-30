@@ -43,6 +43,10 @@
 }
 
 @media only screen and (orientation:landscape) {
+    #home-header h1 {
+        font-size:revert;
+    }
+
     #home-cols {
         margin:2.5%;
         margin-top:1%;
@@ -50,6 +54,10 @@
 
     #home-text {
         padding:3% 7%;
+    }
+
+    #btn-order-now {
+        border-radius:15px;
     }
     
     #btn-order-now, #home-p {

@@ -15,7 +15,7 @@ const Home = () => {
 
                 <div id="home-text" className="one">
                     <p id="home-p">T & Z Deli is proudly the first-of-its-kind Italian-Korean fusion deli in New Jersey, unique both in cuisine and atmosphere. Run by a husband and wife duo, T & Z Deli combines cultural food and values in a bold mix that customers will never forget. From porchetta and gelato to kimchi and seaweed soup, there's a little bit of everything for all palates. Browse the creative menu and see why T & Z Deli has been a success for over 15 years.</p>
-                    <p id="btn-p"><Link className="link"><button id="btn-order-now">Order Now</button></Link></p>
+                    <p id="btn-p"><Link className="link" to="/order"><button id="btn-order-now">Order Now</button></Link></p>
                 </div>
 
                 <StoreHours />
