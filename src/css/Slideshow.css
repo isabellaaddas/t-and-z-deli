@@ -44,7 +44,7 @@
     border-radius:7px;
     position:absolute;
     bottom:10%;
-    left:18.5%;
+    left:17%;
 }
 
 #btn-order-now:hover {
@@ -58,5 +58,6 @@
     
     #btn-order-now {
         font-size:initial;
+        left:18.5%;
     }
 }
