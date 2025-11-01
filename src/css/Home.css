@@ -18,30 +18,6 @@
     font-size:1.05em;
 }
 
-#btn-p {
-    text-align:center;
-}
-
-/* Button */
-#btn-order-now {
-    margin-top:5%;
-    font-weight:bold;
-    font-size:1.1em;
-    padding:5% 20%;
-    background:linear-gradient(to top, var(--quinary-color) 50%, var(--primary-color) 50%);
-    background-size:100% 200%;
-    background-position:0 100%;
-    transition:all 0.2s ease-in-out;
-    overflow:hidden;
-    color:#fff;
-    border:none;
-    border-radius:7px;
-}
-
-#btn-order-now:hover {
-    background-position:0 0;
-}
-
 @media only screen and (orientation:landscape) {
     #home-header h1 {
         font-size:revert;
@@ -56,11 +32,7 @@
         padding:3% 7%;
     }
 
-    #btn-order-now {
-        border-radius:15px;
-    }
-    
-    #btn-order-now, #home-p {
+     #home-p {
         font-size:100%;
-    }
+     }
 }
