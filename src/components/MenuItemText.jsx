@@ -6,7 +6,7 @@ const MenuItemText = (props) => {
     return (
         <div className="menu-item-text three">
             <div className="top-text special-columns">
-                <h4 className="one"><Link className="link" to="#">{props.name}</Link></h4>
+                <h4 className="one"><Link className="link" to={"/orders/"+props.id}>{props.name}</Link></h4>
 
                 <MenuItemButtons />
 

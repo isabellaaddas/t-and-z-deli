@@ -9,6 +9,7 @@ import Catering from "./pages/Catering";
 import Order from "./pages/Order";
 import Vendors from "./pages/Vendors";
 import Contact from "./pages/Contact";
+import Orders from "./pages/Orders";
 
 export default function App() {
   return (
@@ -30,6 +31,8 @@ export default function App() {
         <Route path="vendors" element={<Vendors />}/>
 
         <Route path="contact" element={<Contact />}/>
+
+        <Route path="orders/:id" element={<Orders />}/>
 
         </Route>
 

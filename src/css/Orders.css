@@ -1,0 +1,44 @@
+#orders h2 {
+    font-size:120%;
+}
+
+.previews {
+    margin:5%;
+}
+
+.item-img {
+    padding:7%;
+}
+
+.item-text h2 {
+    text-align:center;
+}
+
+.item-text h3 {
+    border:solid 1px var(--quaternary-color);
+    border-bottom:none;
+    padding:1.5%;
+    margin:0 5%;
+    margin-top:5%;
+    font-size:110%;
+}
+
+.item-text p {
+    border:solid 1px var(--quaternary-color);
+    padding:3%;
+    margin:0 5%;
+}
+
+@media only screen and (orientation:landscape) {
+    #orders h2, .item-text h3 {
+        font-size:revert;
+    }
+
+    .previews {
+        align-items:center;
+    }
+
+    .item-img {
+        padding:0;
+    }
+}
