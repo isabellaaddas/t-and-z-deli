@@ -1,10 +1,25 @@
 import "./../css/MenuSection.css";
 import MenuItem from "./MenuItem";
+import AddMenuItem from "./AddMenuItem";
 import {useState, useEffect} from "react";
 import axios from "axios";
 
 const MenuSection = (props) => {
     const [orders, setOrders] = useState([]);
+    const [showAddDialog, setShowAddDialog] = useState(false);
+
+    const openDialog = (event) => {
+        event.preventDefault();
+        setShowAddDialog(true);
+    }
+
+    const closeDialog = () => {
+        setShowAddDialog(false);
+    }
+
+    const updateMenu = (order) => {
+        setOrders((orders) => [...orders, order]);
+    }
 
     useEffect(() => {
         const loadOrders = async() => {
@@ -45,7 +60,14 @@ const MenuSection = (props) => {
 
     return (
         <div id={props.ident} className="menu-section">
-            <h1>{props.category}</h1>
+            <div className="special-columns title">
+                <h1 className="seven">{props.category}</h1>
+
+                <button onClick={openDialog} className="add-item">+</button>
+                {showAddDialog ? (<AddMenuItem closeDialog={closeDialog}
+                                        updateMenu={updateMenu}
+                                        category={props.ident}/>):("")}
+            </div>
 
             {orders.map((order) => {
                 return (
