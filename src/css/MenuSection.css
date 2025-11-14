@@ -17,10 +17,6 @@
     align-items:center;
 }
 
-.title {
-    margin-bottom:-3em;
-}
-
 .add-item {
     background:#fff;
     border:solid 1px var(--primary-color);
@@ -42,6 +38,10 @@
     .menu-section h1 {
         font-size:150%;
         margin:5%;
+    }
+
+    .title {
+        margin-bottom:-3em;
     }
 
     .add-item {

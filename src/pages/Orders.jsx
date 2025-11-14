@@ -1,5 +1,5 @@
 import "./../css/Orders.css";
-import {useParams} from "react-router-dom";
+import {useParams, Link} from "react-router-dom";
 import {useState, useEffect} from "react";
 import axios from "axios";
 
@@ -53,7 +53,12 @@ const Orders = () => {
             <div className="item-img four"><img src={"https://server-t-and-z-deli.onrender.com/images/" + order.img}/></div>
 
             <div className="item-text five">
-                <h2>{order.name}</h2>
+                <div className="special-columns">
+                    <p><Link to="/order"><button className="back-button">&lt;</button></Link></p>
+
+                    <h2>{order.name}</h2>
+                </div>
+                
 
                 <h3>Ingredients</h3>
                 <p>{order.description} Includes: {printIngrList()}</p>

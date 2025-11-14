@@ -21,7 +21,7 @@ const AddMenuItem = (props) => {
             "body":formData
         });
 
-        if(response.status == 200){
+        if (response.status == 200) {
             setResult("Added new order!");
             event.target.reset();
             props.closeDialog();
@@ -76,13 +76,13 @@ const AddMenuItem = (props) => {
                             </div>
 
                             <p id="img-upload">
-                                <label htmlFor="img">Upload Image: </label>
+                                <label htmlFor="img">Upload Menu Image: </label>
                                 <input type="file" id="img" name="img" accept="image/*" onChange={uploadImage} required/>
                             </p>
                         </section>
 
                         <p>
-                            <button type="submit">Submit</button>
+                            <button type="submit" className="add-submit-button">Submit</button>
                         </p>
 
                         <p>{result}</p>

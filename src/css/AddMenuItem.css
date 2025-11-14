@@ -23,6 +23,7 @@
 
 .w3-button {
   font-size:1.5em;
+  color:var(--quaternary-color);
 }
 
 .w3-display-topright {
@@ -53,6 +54,15 @@
 
 .w3-modal section input {
   border:none;
+}
+
+.add-submit-button {
+  background:var(--quinary-color);
+  border:solid 1px var(--quinary-color);
+  border-radius:3px;
+  color:#fff;
+  padding:3px 5px;
+  font-size:1em;
 }
 
 #img-preview {
