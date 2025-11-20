@@ -1,88 +1,88 @@
 import "./../css/Dialog.css";
 import {useState} from "react";
 
-const AddMenuItem = (props) => {
-    const [result, setResult] = useState("");
+const EditMenuItem = (props) => {
+     const [result, setResult] = useState("");
     const [prevSrc, setPrevSrc] = useState("");
 
     const uploadImage = (event) => {
         setPrevSrc(URL.createObjectURL(event.target.files[0]));
     };
 
-    const addItem = async(event) => {
-        event.preventDefault(); //stops us from going to another page or refreshing
-        setResult("Uploading new item...");
+    const editItem = async(event) => {
+        event.preventDefault();
+        setResult("Editing item...");
 
         const formData = new FormData(event.target);
         console.log(...formData);
         
-        const response = await fetch("https://server-t-and-z-deli.onrender.com/api/orders", {
-            "method":"POST",
+        const response = await fetch(`https://server-t-and-z-deli.onrender.com/api/orders/${props.id}`, {
+            "method":"PUT",
             "body":formData
         });
 
         if (response.status == 200) {
-            setResult("Added new order!");
+            setResult("Edited order!");
             event.target.reset();
-            props.closeDialog();
-            props.updateMenu(await response.json());
+            props.closeEditDialog();
+            props.updateOrder(await response.json());
         } else {
-            setResult("Error adding order.");
+            setResult("Error editing order.");
         }
     };
 
     return (
-        <div id="add-dialog" className="w3-modal">
+        <div id="edit-dialog" className="w3-modal">
             <div className="w3-modal-content">
                 <div className="w3-container">
-                    <span id="close-span" className="w3-button w3-display-topright" onClick={props.closeDialog}>&times;</span>
+                    <span id="close-span" className="w3-button w3-display-topright" onClick={props.closeEditDialog}>&times;</span>
                     
-                    <form id="add-order-form" onSubmit={addItem}>
-                        <h2>Add New Menu Item</h2>
+                    <form id="edit-order-form" onSubmit={editItem}>
+                        <h2>Edit Menu Item</h2>
 
                         <p className="columns">
                             <label htmlFor="name">Name of Item:</label><br/>
-                            <input type="text" id="name" name="name" required min="3"></input>
+                            <input type="text" id="name" name="name" required min="3" defaultValue={props.order.name}></input>
                         </p>
 
-                        <input type="hidden" id="category" name="category" defaultValue={props.category} required></input>
+                        <input type="hidden" id="category" name="category" defaultValue={props.order.category} required></input>
 
                         <p className="columns">
                             <label htmlFor="price">Set Price:</label><br/>
-                            <input type="number" step="0.01" name="price" id="price" required min="0.10"></input>
+                            <input type="number" step="0.01" name="price" id="price" required min="0.10" defaultValue={props.order.price}></input>
                         </p>
 
                         <p className="columns">
                             <label htmlFor="description">Give a brief description of the item:</label><br/>
-                            <textarea name="description" id="description" required min="10"></textarea>
+                            <textarea name="description" id="description" required min="10" defaultValue={props.order.description}></textarea>
                         </p>
 
                         <p className="columns">
                             <label htmlFor="ingredients">List ingredients (comma-separated):</label><br/>
-                            <textarea name="ingredients" id="ingredients" required min="3"></textarea>
+                            <textarea name="ingredients" id="ingredients" required min="3" defaultValue={props.order.ingredients}></textarea>
                         </p>
 
                         <p className="columns">
                             <label htmlFor="allergens">List allergens (comma-separated):</label><br/>
-                            <textarea name="allergens" id="allergens" defaultValue="none of the common allergens" required min="3"></textarea>
+                            <textarea name="allergens" id="allergens" required min="3" defaultValue={props.order.allergens}></textarea>
                         </p>
 
                         <section className="columns">
                             <div>
                                 <p id="img-prev-section">
                                     {prevSrc != "" ? (<img id="img-preview" src={prevSrc}/>)
-                                                    :("")}
+                                                    :(<img id="img-preview" src={"https://server-t-and-z-deli.onrender.com/images/" + props.order.img}/>)}
                                 </p>
                             </div>
 
                             <p id="img-upload">
                                 <label htmlFor="img">Upload Menu Image: </label>
-                                <input type="file" id="img" name="img" accept="image/*" onChange={uploadImage} required/>
+                                <input type="file" id="img" name="img" accept="image/*" onChange={uploadImage}/>
                             </p>
                         </section>
 
                         <p>
-                            <button type="submit" className="add-submit-button">Submit</button>
+                            <button type="submit" className="submit-button">Submit</button>
                         </p>
 
                         <p>{result}</p>
@@ -93,4 +93,4 @@ const AddMenuItem = (props) => {
     );
 };
 
-export default AddMenuItem;
+export default EditMenuItem;

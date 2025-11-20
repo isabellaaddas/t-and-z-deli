@@ -1,0 +1,22 @@
+.edit-delete-buttons {
+    text-align:center;
+    margin-top:15px;
+}
+
+.edit-delete-buttons img {
+    width:6%;
+}
+
+.edit-delete-buttons img:first-child {
+    margin-right:5px;
+}
+
+.edit-delete-buttons img:last-child {
+    margin-left:5px;
+}
+
+@media only screen and (orientation:landscape) {
+    .edit-delete-buttons img {
+        width:4%;
+    }
+}

@@ -2,10 +2,15 @@ import "./../css/Orders.css";
 import {useParams, Link} from "react-router-dom";
 import {useState, useEffect} from "react";
 import axios from "axios";
+import EditDeleteButtons from "./../components/EditDeleteButtons";
+import EditMenuItem from "./../components/EditMenuItem";
+import DeleteMenuItem from "./../components/DeleteMenuItem";
 
 const Orders = () => {
     const param = useParams();
     const [order, setOrder] = useState({});
+    const [showEdit, setShowEdit] = useState(false);
+    const [showDelete, setShowDelete] = useState(false);
 
     useEffect(() => {
         const loadOrder = async() => {
@@ -15,6 +20,23 @@ const Orders = () => {
 
         loadOrder();
     }, []);
+
+    const updateOrder = (order) => {
+        setOrder(order);
+    }
+
+    const closeAnyDialog = () => {
+        setShowEdit(false);
+        setShowDelete(false);
+    }
+
+    const openEditDialog = () => {
+        setShowEdit(true);
+    }
+
+    const openDeleteDialog = () => {
+        setShowDelete(true);
+    }
 
     const printIngrList = () => {
         let list = "";
@@ -50,6 +72,12 @@ const Orders = () => {
 
     return (
         <main id="orders" className="previews columns">
+            {showEdit ? (<EditMenuItem closeEditDialog={closeAnyDialog} 
+                        updateOrder={updateOrder} order={order}
+                        id={param.id}/>):("")}
+            {showDelete ? (<DeleteMenuItem closeDeleteDialog={closeAnyDialog}
+                            order={order} id={param.id}/>):("")}
+
             <div className="item-img four"><img src={"https://server-t-and-z-deli.onrender.com/images/" + order.img}/></div>
 
             <div className="item-text five">
@@ -65,9 +93,13 @@ const Orders = () => {
 
                 <h3>Allergen Information</h3>
                 <p>Contains: {printAllergenList()} Substitutions can be made upon request. Cross-contamination may include contact with other gluten products, dairy products, meat products, nuts, eggs, soy, and fish.</p>
+
+                <EditDeleteButtons order={order} 
+                        openEditDialog={openEditDialog}
+                        openDeleteDialog={openDeleteDialog}/>
             </div>
         </main>
-    )
+    );
 };
 
 export default Orders;

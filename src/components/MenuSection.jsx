@@ -2,18 +2,20 @@ import "./../css/MenuSection.css";
 import MenuItem from "./MenuItem";
 import AddMenuItem from "./AddMenuItem";
 import {useState, useEffect} from "react";
+import {useLocation} from "react-router-dom";
 import axios from "axios";
 
 const MenuSection = (props) => {
+    const location = useLocation();
     const [orders, setOrders] = useState([]);
     const [showAddDialog, setShowAddDialog] = useState(false);
 
-    const openDialog = (event) => {
+    const openAddDialog = (event) => {
         event.preventDefault();
         setShowAddDialog(true);
     }
 
-    const closeDialog = () => {
+    const closeAddDialog = () => {
         setShowAddDialog(false);
     }
 
@@ -56,15 +58,15 @@ const MenuSection = (props) => {
         };
 
         loadOrders();
-    }, []);
+    }, [location]);
 
     return (
         <div id={props.ident} className="menu-section">
             <div className="special-columns title">
                 <h1 className="seven">{props.category}</h1>
 
-                <button onClick={openDialog} className="add-item">+</button>
-                {showAddDialog ? (<AddMenuItem closeDialog={closeDialog}
+                <button onClick={openAddDialog} className="add-item">+</button>
+                {showAddDialog ? (<AddMenuItem closeDialog={closeAddDialog}
                                         updateMenu={updateMenu}
                                         category={props.ident}/>):("")}
             </div>
@@ -76,7 +78,8 @@ const MenuSection = (props) => {
                             image={order.img}
                             description={order.description}
                             key={order._id}
-                            id={order._id}/>
+                            id={order._id}
+                            updateMenu={updateMenu}/>
                 );
             })}
         </div>

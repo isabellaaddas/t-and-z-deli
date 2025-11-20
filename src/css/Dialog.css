@@ -56,13 +56,25 @@
   border:none;
 }
 
-.add-submit-button {
+.submit-button {
   background:var(--quinary-color);
   border:solid 1px var(--quinary-color);
   border-radius:3px;
   color:#fff;
   padding:3px 5px;
   font-size:1em;
+}
+
+.yes-no-buttons {
+  margin-bottom:10px;
+}
+
+.yes-no-buttons button:first-child {
+  margin-right:2px;
+}
+
+.yes-no-buttons button:last-child {
+  margin-left:2px;
 }
 
 #img-preview {
@@ -73,7 +85,7 @@
   .w3-modal-content {
     width:50%;
     padding:0.5% 2%;
-    top:12%;
+    top:12.5px;
   }
 
   .w3-modal p {
