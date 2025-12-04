@@ -7,7 +7,7 @@
 }
 
 .top-text, .bottom-text {
-    font-size:90%;
+    font-size:110%;
 }
 
 .top-text h4:first-child {
@@ -21,6 +21,7 @@
 .bottom-text p {
     margin:0;
     margin-bottom:5px;
+    font-style:italic;
 }
 
 @media only screen and (orientation:landscape) {
@@ -29,7 +30,7 @@
     }
 
     .top-text, .bottom-text {
-        font-size:100%;
+        font-size:105%;
     }
 
     .top-text h4:first-child {
